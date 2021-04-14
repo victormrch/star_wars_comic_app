@@ -1,61 +1,87 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    background-image: url(assets/background.png);
-    background-repeat: no-repeat;
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Pathway Gothic One", sans-serif;
 }
+body {
+  background-image: url(assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    min-height: 100vh;
-  }
-  .menu-btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    background-color: transparent;
-  }
-  .menu-btn__burger {
-    width: 50px;
-    height: 6px;
-    background: #ECB900;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-  }
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: #ECB900;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-  }
-  .menu-btn__burger::before {
-    transform: translateY(-16px);
-  }
-  .menu-btn__burger::after {
-    transform: translateY(16px);
-  }
-  /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
+  display: flex;
+  justify-content: flex-start;
+}
+.menu_title {
+  display: flex;
+  flex-grow: 1;
+  color: #ecb900;
+  font-size: 100px;
+}
+.menu_title__left {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+.menu_title__logo {
+  padding: 2rem;
+  flex: 1;
+}
+.menu_title__right {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+  align-self: center;
+  flex: 1;
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+}
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #ecb900;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #ecb900;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
