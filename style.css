@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 
 * {
-  margin: 0;
   padding: 0;
   font-family: "Pathway Gothic One", sans-serif;
 }
@@ -10,8 +9,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* MENU SECTION */
 header {
+  margin: 2px 2px;
   display: flex;
   justify-content: flex-start;
 }
@@ -73,7 +73,7 @@ header {
 .menu-btn__burger::after {
   transform: translateY(16px);
 }
-/* ANIMATION */
+/* ANIMATION MENU */
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
@@ -85,3 +85,33 @@ header {
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
+/* NAVBAR SECTION */
+.navbar{
+  margin: 5px;
+}
+ul{
+display: flex;
+}
+li{
+  display: flex;
+  font-size: 25px;
+  margin: 5px;
+  flex: 1;
+}
+.icon{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  
+}
+
